@@ -8,6 +8,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    environment: secrets
     steps:
       -
         name: Checkout
@@ -32,4 +33,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.PRIVATE_REG }}/volt-traffic-gen:latest
+            ${{ secrets.DOCKERHUB_USER }}/volt-traffic-gen:latest
