@@ -27,3 +27,5 @@ The "frontend" microservice routes to various secondary microservices in the sam
 
 The demo application keeps state in a redis database running in the second "state" virtual site.
 The state service is presented to the other microservices through a [TCP loadbalancer](https://www.volterra.io/docs/how-to/app-networking/tcp-load-balancer).
+
+This has been adapted for demo1 ENV
