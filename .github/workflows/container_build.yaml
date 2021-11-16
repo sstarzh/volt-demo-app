@@ -23,7 +23,7 @@ jobs:
         name: Login to private container registry
         uses: docker/login-action@v1 
         with:
-          username: ${{ secrets.DOCKERHUB_USER }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
@@ -33,4 +33,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USER }}/volt-traffic-gen:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/volt-traffic-gen:latest
