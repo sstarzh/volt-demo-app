@@ -216,10 +216,8 @@ resource "volterra_http_loadbalancer" "frontend" {
       namespace = volterra_namespace.ns.name
     }
   }
-  https_auto_cert {
-    add_hsts      = false
-    http_redirect = true
-    no_mtls       = true
+  http {
+    dns_volterra_managed = false
   }
   waf {
     name      = volterra_waf.waf.name
